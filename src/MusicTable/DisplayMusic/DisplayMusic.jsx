@@ -1,7 +1,8 @@
 
 const DisplayMusic = (props) => {
+    console.log(props.song)
     return(
-    <table>
+    <table className="DisplayMusic">
         <thead>
           <tr>
             <th>Title</th>

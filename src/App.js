@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import DisplayMusic from './MusicTable/DisplayMusic/DisplayMusic';
+import SearchBar from './MusicTable/DisplayMusic/SearchBar/SearchBar';
+
 
 function App() {
 
@@ -17,6 +19,7 @@ function App() {
   return (
     <div>
       <DisplayMusic parentSongs={songs} />
+      <SearchBar />
     </div>
   );
 }
