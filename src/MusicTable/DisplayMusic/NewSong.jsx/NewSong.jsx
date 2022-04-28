@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const SearchBar = (props) => {
     
     const [title, setTitle] = useState('');    
@@ -34,7 +33,7 @@ const SearchBar = (props) => {
             <input type='date' value={release_date} onChange={(event) => setReleaseDate(event.target.value)} />
             <label>Genre</label>
             <input type='genre' value={genre} onChange={(event) => setGenre(event.target.value)} />
-            <button type='submit'>Add Song</button>
+            <button type='submit' className="btn btn-primary" style={{'margin-left': '1em'}}>Add Song</button>
         </form>
 
      );
