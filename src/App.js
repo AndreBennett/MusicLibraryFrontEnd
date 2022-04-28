@@ -8,19 +8,26 @@ function App() {
 
   const [songs, setSongs] = useState([]);
 
-  useEffect(() => {
-    getAllSongs();
+  function addNewSong(song){
+
+    let tempSongs = [...songs, song];
+
+    setSongs(tempSongs);
+}
+
+    useEffect(() => {
+      getAllSongs();
   }, [])
 
-  async function getAllSongs(){
-    let response = await axios.get('http://127.0.0.1:8000/api/Song/');
-    setSongs(response.data);
+    async function getAllSongs(){
+      let response = await axios.get('http://127.0.0.1:8000/api/Song/');
+      setSongs(response.data);
   }
-  return (
-    <div>
-      <DisplayMusic parentSongs={songs} />
-      <SearchBar />
-    </div>
+    return (
+      <div>
+        <DisplayMusic parentSongs={songs} />
+        <SearchBar addNewSong={addNewSong} />
+      </div>
   );
 }
 

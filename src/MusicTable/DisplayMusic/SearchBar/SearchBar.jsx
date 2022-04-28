@@ -19,6 +19,7 @@ const SearchBar = (props) => {
             genre: genre
         };
         console.log(newSong)
+        props.addNewSong(newSong)
     }
     
     return (
