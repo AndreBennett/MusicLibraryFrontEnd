@@ -4,14 +4,11 @@ import DisplayMusic from './MusicTable/DisplayMusic/DisplayMusic';
 import NewSong from './MusicTable/DisplayMusic/NewSong.jsx/NewSong';
 import './App.css';
 
+
 function App() {
-
   const [songs, setSongs] = useState([]);
-
   function addNewSong(song){
-
     let tempSongs = [...songs, song];
-
     setSongs(tempSongs);
 }
 
